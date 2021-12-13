@@ -3,7 +3,6 @@
 max(abs(out.acc));
 %max(abs(out.acc_TMD));
 max(abs(out.acc_STMD));
-t = out.tout;
 figure
     plot(t,out.acc,'-r')
     hold on

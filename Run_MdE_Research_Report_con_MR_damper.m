@@ -32,16 +32,16 @@ ts = 1/fs;
 % TMD data
 mu = 0.02;  % mass ratio
 mt = mu*m1; % TMD mass
-
+sat = 50; %saturates at about 50 N
 dampt = sqrt(3*mu/(8*(1+mu)))*sqrt(1+mu*27/32);
 ft = f1*sqrt(1/(1+mu));               
 
 kt = ((2*pi*ft)^2)*mt;                          
-%ct = 2*mt*(2*pi*ft)*dampt; 
+ct = 2*mt*(2*pi*ft)*dampt; 
 I1 = 0.01;
 
 % The Structure change (sólo si queremos)  
-f1d = f1;               
+f1d = f1*0.9;               
 damp1d = damp1;      
 m1d = m1; 
 k1d = m1d*((f1d*2*pi)^2);
@@ -55,6 +55,7 @@ Gsd = ((1/m1d)*s*s)/(s*s+s*(c1d/m1d) + (k1d/m1d));
 % To semi-active control law
 I2 = 0.5;
 I0 = 0;
+gain = 10000;
 
 % EXECUTE MODEL
 sim model_conMR_MdE.slx
