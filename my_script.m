@@ -26,6 +26,7 @@ ft = f1*sqrt(1/(1+mu));
 
 kt = ((2*pi*ft)^2)*mt;                          
 ct = 2*mt*(2*pi*ft)*dampt; 
+sat = 50;
 
 % The Structure change (sólo si queremos)  
 f1d = f1*1.2;               
